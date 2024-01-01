@@ -87,7 +87,6 @@ vendor/firmware/bcmdhd_sta.bin_b1
 -vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 
 # Camera
--vendor/lib64/libGrallocMapperCamera.so
 -vendor/lib64/libSEF.quram.so
 -vendor/lib64/libbayergdccore.so
 -vendor/lib64/libexynoscamera_fakefusion.so
@@ -276,7 +275,7 @@ vendor/tee/tui/resolution_common/ID00000100
 -vendor/bin/hw/android.hardware.drm@1.4-service.widevine|33364fc077597ad5f95d8fbdf44d6d37e481a927
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
--vendor/lib/libwvhidl.so|2e192582de87156f02b330b64016ecdb5ff9d87b
+-vendor/lib/libwvhidl.so|577cfc76c46c2325c965fdcf147d57b6539709a3
 
 # Wi-Fi
 vendor/etc/wifi/indoorchannel.info

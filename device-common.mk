@@ -63,6 +63,7 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service_64.exynos990 \
+    libGrallocMapperCamera \
     libhwjpeg \
     libsensorndkbridge
 
@@ -73,6 +74,10 @@ PRODUCT_PACKAGES += \
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
+
+# Display
+PRODUCT_PACKAGES += \
+    libGrallocWrapper
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -106,6 +111,7 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor:64 \
     android.hardware.gnss@2.1.vendor:64 \
     init.gps.rc
 
@@ -146,6 +152,7 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
+    libcrypto-v33 \
     libkeymaster4_1support.vendor:64
 
 # Livedisplay
@@ -271,6 +278,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.samsung
@@ -325,12 +336,12 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung \
-    hardware/samsung/aidl/power-libperfmgr
+    hardware/samsung
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.samsung
+    android.hardware.thermal-service.samsung \
+    thermal_symlinks.samsung
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
